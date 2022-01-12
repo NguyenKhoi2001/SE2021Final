@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B96EF73-1BEF-4F7C-8BCD-1928A776091C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CheckTheGoodApp</RootNamespace>
+    <AssemblyName>CheckTheGoodApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckTheGoodDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CheckTheGoodDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CheckTheGoodDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CheckTheGoodDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CheckTheGoodDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CheckTheGoodDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ImportList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportList.Designer.cs">
+      <DependentUpon>ImportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeMenu.Designer.cs">
+      <DependentUpon>HomeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import.Designer.cs">
+      <DependentUpon>Import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Income.Designer.cs">
+      <DependentUpon>Income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monthly.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateNote.Designer.cs">
+      <DependentUpon>UpdateNote.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ImportList.resx">
+      <DependentUpon>ImportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeMenu.resx">
+      <DependentUpon>HomeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import.resx">
+      <DependentUpon>Import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Income.resx">
+      <DependentUpon>Income.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateNote.resx">
+      <DependentUpon>UpdateNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CheckTheGoodDataSet.xsc">
+      <DependentUpon>CheckTheGoodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CheckTheGoodDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CheckTheGoodDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CheckTheGoodDataSet.xss">
+      <DependentUpon>CheckTheGoodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CheckTheGoodDataSet1.xsc">
+      <DependentUpon>CheckTheGoodDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CheckTheGoodDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CheckTheGoodDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CheckTheGoodDataSet1.xss">
+      <DependentUpon>CheckTheGoodDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CheckTheGoodDataSet2.xsc">
+      <DependentUpon>CheckTheGoodDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CheckTheGoodDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CheckTheGoodDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CheckTheGoodDataSet2.xss">
+      <DependentUpon>CheckTheGoodDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CheckTheGoodApp.CheckTheGoodDataSetTableAdapters.ProductTableAdapter.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodApp.CheckTheGoodDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodApp.CheckTheGoodDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodApp.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodApp.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodDataSet.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodDataSet.ProductDataTable.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodDataSet.ProductRow.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodDataSet.ProductRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\CheckTheGoodDataSet.ProductRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Home.datasource" />
+    <None Include="Properties\DataSources\Import.datasource" />
+    <None Include="Properties\DataSources\LoginForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Receipt.datasource" />
+    <None Include="Properties\DataSources\RecieptClass.datasource" />
+    <None Include="Properties\DataSources\RegisterForm.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

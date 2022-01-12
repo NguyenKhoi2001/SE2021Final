@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CheckTheGoodDataSet1" targetNamespace="http://tempuri.org/CheckTheGoodDataSet1.xsd" xmlns:mstns="http://tempuri.org/CheckTheGoodDataSet1.xsd" xmlns="http://tempuri.org/CheckTheGoodDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CheckTheGoodConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CheckTheGoodConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CheckTheGoodApp.Properties.Settings.GlobalReference.Default.CheckTheGoodConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountListTableAdapter" GeneratorDataComponentClassName="AccountListTableAdapter" Name="AccountList" UserDataComponentName="AccountListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CheckTheGoodConnectionString (Settings)" DbObjectName="CheckTheGood.dbo.AccountList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT UserType FROM dbo.AccountList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserType" DataSetColumn="UserType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CheckTheGoodDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="CheckTheGoodDataSet1" msprop:Generator_DataSetName="CheckTheGoodDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountList" msprop:Generator_RowEvHandlerName="AccountListRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountListRowDeleted" msprop:Generator_RowDeletingName="AccountListRowDeleting" msprop:Generator_RowEvArgName="AccountListRowChangeEvent" msprop:Generator_TablePropName="AccountList" msprop:Generator_RowChangedName="AccountListRowChanged" msprop:Generator_RowChangingName="AccountListRowChanging" msprop:Generator_TableClassName="AccountListDataTable" msprop:Generator_RowClassName="AccountListRow" msprop:Generator_TableVarName="tableAccountList" msprop:Generator_UserTableName="AccountList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserType" msprop:Generator_ColumnPropNameInRow="UserType" msprop:Generator_ColumnPropNameInTable="UserTypeColumn" msprop:Generator_ColumnVarNameInTable="columnUserType" msprop:Generator_UserColumnName="UserType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

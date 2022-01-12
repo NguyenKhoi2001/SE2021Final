@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    string[] TableHeaders = new string[] { "Pid", "PName", "Pprice" };
+}
+
+<script>
+    function AddOrder(){
+
+    }
+</script>
+<div class="jumbotron">
+    <h1>Welcome to product store</h1>
+</div>
+
+<div class="row">
+    <form acction="" method="post">
+        <table class="table" style="grid-auto-columns:auto;padding: 20px;">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var head in TableHeaders)
+                        {
+                            <th style="font-size:30px">
+                                @head
+                            </th>
+                        }
+                    }
+                </tr>
+            </thead>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model)
+                    {
+                        <tr style="font-size: 25px">
+                            <td>@Data.ProductId</td>
+                            <td>@Data.ProductName</td>
+                            <td>@Data.ProductPrice</td>
+                            <!--
+                        <td><input type="number" placeholder="Enter quantity"/></td>
+                        <td><button name="AddOrder" id="btnAdd_">Add</button></td>
+                        -->
+                        </tr>
+                    }
+                }
+            }
+
+        </table>
+    </form>
+    <div class="row" >
+        <div class="column" style="float:left;width:45%;padding:10px;">
+            <form>
+                @using (Html.BeginForm("AddOrder", "OrderControllerController"))
+                {
+                <input type="Text" placeholder="Item Id" style="padding:20px;width:300px" />
+                <input type="number" placeholder="number of item" style="padding:20px;width:300px" />
+                <input type="submit" value="Add Order" style="padding:20px;font-size:30px" />
+                <br />
+                }
+            </form>
+        </div>
+        <div class="column" style="float:left;width:45%;padding:10px;">
+            <form>
+                <input type="Text" id="address" placeholder="Type your address" style="padding:20px;width:300px" /><br />
+                <div style="font-size:30px"> Choose your payment method</div>
+                <input type="radio" id="cash" name="payment" value="cash">
+                <label for="cash">Cash</label><br>
+                <input type="radio" id="bank" name="payment" value="bank">
+                <label for="bank">Bank Transfer</label><br>
+                <input type="radio" id="momo" name="payment" value="momo">
+                <label for="momo">Momo</label>
+                <br />
+                <button style="padding:20px;font-size:30px">Make order</button>
+            </form>
+        </div>
+    </div>
+</div>
